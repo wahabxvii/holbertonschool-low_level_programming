@@ -26,7 +26,7 @@ _putchar(' ');
 }
 if (p >= 10)
 {
-_putchar((p /10) + '0');
+_putchar((p / 10) + '0');
 _putchar((p % 10) + '0');
 }
 if (c < 9)
