@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * print_sign - prints the sign of the number
+ * @n: character in ASCII
  * Return: 1 if +, 0 if 0 or -1 if -
  */
 int print_sign(int n)
