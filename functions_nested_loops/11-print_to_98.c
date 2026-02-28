@@ -1,37 +1,42 @@
 #include "main.h"
 
 /**
- * times_table - prints all natural numbers from n to 98
- * Return: nothing
+ * print_to_98 - prints all natural numbers from n to 98
+ * @n: number
+ * Return: 0
  */
-void times_table(void)
+void print_to_98(int n)
 {
-    int r, c, p;
-
-    for (r = 0; r <= 9; r++)
-    {
-        for (c = 0; c <= 9; c++)
-        {
-            p = r * c;
-
-            if (c != 0)
-            {
-                _putchar(',');
-                _putchar(' ');
-            }
-
-            if (p < 10)
-            {
-                _putchar(' ');
-            }
-            else
-            {
-                _putchar((p / 10) + '0');
-            }
-
-            _putchar((p % 10) + '0');
-        }
-        _putchar('\n');
-    }
+	if (n <= 98)
+	{
+		for (; n <= 98; n++)
+		{
+			if (n == 98)
+			{
+				printf("%d", n);
+				printf("\n");
+				break;
+			}
+			else
+			{
+				printf("%d, ", n);
+			}
+		}
+	}
+	else
+	{
+		for (; n >= 98; n--)
+		{
+			if (n == 98)
+			{
+				printf("%d", n);
+				printf("\n");
+				break;
+			}
+			else
+			{
+				printf("%d, ", n);
+			}
+		}
+	}
 }
-
