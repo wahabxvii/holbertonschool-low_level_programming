@@ -5,7 +5,7 @@
  * without useing standered librarys
  * Return: Always 0.
  */
-int print_alphabet(void);
+int main(void);
 {
 int c;
 for (c = 'a';
