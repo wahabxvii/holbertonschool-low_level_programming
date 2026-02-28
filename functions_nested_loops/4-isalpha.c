@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isalpha.c - checks for alphabet character
+ * _isalpha - checks for alphabet character
  * @c: charcter in ASCII
  * Return: 1 if c lowercase and 0 otherwise
  */
