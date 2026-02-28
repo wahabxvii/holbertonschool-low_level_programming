@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _abs - computes the absolute value of an integer
- *@v - character in ASCII
+ *@v: character in ASCII
  * Return: absolute value
  */
 int _abs(int v)
