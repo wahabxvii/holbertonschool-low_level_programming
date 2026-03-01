@@ -6,13 +6,12 @@
  */
 int _isdigit(int c)
 {
-	int a = 1 , b = 0;
-	if (c >= 0 && c <= 9)
+	if (c >= 0 || c <= 9)
 	{
-		return (a);
+		return (1);
 	}
 	else
 	{
-		return (b);
+		return (0);
 	}
 }
