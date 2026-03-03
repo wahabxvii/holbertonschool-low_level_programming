@@ -4,12 +4,14 @@
  * @s: variable pointer
  * Return:
  */
-int _strlen(int *s)
+int _strlen(char *s)
 {
+	int i = 0;
+
 	while (*s != '\0')
 	{
-		_putchar(*s);
-		_putchar('\n');
+		i++;
+		*s++;
 	}
-	return (0);
+	return (i);
 }
