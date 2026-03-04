@@ -22,6 +22,6 @@ int _atoi(char *s)
 		++s;
 	}
 	if (!(parity % 2))
-		return (-num);
-	return (num);
+		return (num);
+	return (-num);
 }
