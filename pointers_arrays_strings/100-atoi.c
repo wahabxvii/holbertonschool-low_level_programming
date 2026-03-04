@@ -6,7 +6,7 @@
  */
 int _atoi(char *s)
 {
-	short parity = 0;
+	short sign = 0;
 	int num = 0;
 
 	while ((*s >= 9 && *s <= 13) || *s == 32)
@@ -14,7 +14,7 @@ int _atoi(char *s)
 	while (*s == '+' || *s == '-')
 	{
 		if (*s == '-')
-			parity++;
+			sign *= - 1;
 		++s;
 	}
 	while (*s >= 48 && *s <= 57)
@@ -23,7 +23,5 @@ int _atoi(char *s)
 		num += *s - 48;
 		++s;
 	}
-	if (!(parity % 2))
-		return (num);
-	return (-num);
+	return (num * sign);
 }
