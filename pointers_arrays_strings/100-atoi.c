@@ -9,6 +9,8 @@ int _atoi(char *s)
 	short parity = 0;
 	int num = 0;
 
+	while ((*s >= 9 && <= 13) || *s == 32)
+		s++;
 	while (*s == '+' || *s == '-')
 	{
 		if (*s == '-')
