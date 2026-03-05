@@ -21,11 +21,8 @@ int _atoi(char *s)
 		else if (*s >= 48 && *s <= 57)
 		{
 			digit_found = 1;
-			int digit = *s - 48
-				if (num > 214748364 || (num == 214748364 && digit > 7))
-					break;
 			num *= 10;
-			num += digit;
+			num += *s - 48;
 			s++;
 		}
 		else if (digit_found)
