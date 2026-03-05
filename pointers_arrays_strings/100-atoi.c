@@ -6,22 +6,34 @@
  */
 int _atoi(char *s)
 {
-	short sign = 0;
-	int num = 0;
+    int sign = 1;
+    int num = 0;
+    int digit = 0;
 
-	while ((*s >= 9 && *s <= 13) || *s == 32)
-		++s;
-	while (*s == '+' || *s == '-')
-	{
-		if (*s == '-')
-			sign *= - 1;
-		++s;
-	}
-	while (*s >= 48 && *s <= 57)
-	{
-		num *= 10;
-		num += *s - 48;
-		++s;
-	}
-	return (num * sign);
+    while (*s != '\0')
+    {
+        if ((*s == '+' || *s == '-') && !digit)
+        {
+            if (*s == '-')
+                sign *= -1;
+            s++;
+        }
+        else if (*s >= 48 && *s <= 57)
+        {
+            digit = 1;
+            num *= 10;
+            num += *s - 48;
+            s++;
+        }
+        else if (digit)
+        {
+            break;
+        }
+        else
+        {
+            s++;
+        }
+    }
+
+    return (num * sign);
 }
