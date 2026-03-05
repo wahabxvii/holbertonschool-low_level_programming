@@ -4,7 +4,7 @@
  * @s: pointer to a string
  * Return: int number
  */
-int myAtoi(const char* str)
+int _atoi(char* str)
 {
 	int sign = 1, base = 0, i = 0;
 
