@@ -4,30 +4,38 @@
  * @s: pointer to a string
  * Return: int number
  */
-int _atoi(char* str)
+int _atoi(char *s)
 {
-	int sign = 1, base = 0, i = 0;
+	int sign = 1;
+	int num = 0;
+	int digit_found = 0;
 
-	while (str[i] == ' ')
+	while (*s != '\0')
 	{
-		i++;
-	}
-	if (str[i] == '-' || str[i] == '+')
-	{
-		sign = 1 - 2 * (str[i++] == '-');
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		if (base > 2147483647 / 10
-			|| (base == 2147483647 / 10
-			&& str[i] - '0' > 7))
+		if ((*s == '+' || *s == '-') && !digit_found)
 		{
-			if (sign == 1)
-				return 2147483647;
-			else
-				return 2147483647;
+			if (*s == '-')
+				sign *= -1;
+			s++;
 		}
-		base = 10 * base + (str[i++] - '0');
+		else if (*s >= 48 && *s <= 57)
+		{
+			digit_found = 1;
+			int digit = *s - 48
+				if (num > 214748364 || (num == 214748364 && digit > 7))
+					break;
+			num *= 10;
+			num += digit;
+			s++;
+		}
+		else if (digit_found)
+		{
+			break;
+		}
+		else
+		{
+			s++;
+		}
 	}
-	return base * sign;
+	return (num * sign);
 }
