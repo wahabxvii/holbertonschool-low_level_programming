@@ -6,34 +6,37 @@
  */
 int _atoi(char *s)
 {
-    int sign = 1;
-    int num = 0;
-    int digit = 0;
+	int sign = 1;
+	int num = 0;
+	int digit_found = 0;
 
-    while (*s != '\0')
-    {
-        if ((*s == '+' || *s == '-') && !digit)
-        {
-            if (*s == '-')
-                sign *= -1;
-            s++;
-        }
-        else if (*s >= 48 && *s <= 57)
-        {
-            digit = 1;
-            num *= 10;
-            num += *s - 48;
-            s++;
-        }
-        else if (digit)
-        {
-            break;
-        }
-        else
-        {
-            s++;
-        }
-    }
+	while (*s != '\0')
+		{
+			if ((*s == '+' || *s == '-') && !digit_found)
+			{
+				if (*s == '-')
+					sign *= -1;
+					s++;
+			}
+			else if (*s >= 48 && *s <= 57)
+			{
+				digit_found = 1;
+				int digit = *s - 48;
+				if (num > 214748364 || (num == 214748364 && digit > 7))
+					break;
 
-    return (num * sign);
+				num *= 10;
+				num += digit;
+				s++;
+			}
+			else if (digit_found)
+			{
+				break;
+			}
+			else
+			{
+				s++;
+			}
+		}
+	return (num * sign);
 }
