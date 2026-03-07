@@ -23,7 +23,7 @@ char *cap_string(char *s)
 				j = 0;
 				while (sep[j] != '\0')
 				{
-					if (s[i] == sep[j])
+					if (s[i - 1] == sep[j])
 					{
 						s[i] = s[i] - ('a' - 'A');
 						break;
