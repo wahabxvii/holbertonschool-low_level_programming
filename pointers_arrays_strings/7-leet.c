@@ -12,6 +12,7 @@ char *leet(char *s)
 	while (s[i])
 	{
 		int j = 0;
+
 		while (from[j])
 		{
 			if (s[i] == from[j])
