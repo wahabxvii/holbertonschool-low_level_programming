@@ -6,7 +6,7 @@
  */
 char *cap_string(char *s)
 {
-	int i , j;
+	int i, j;
 	const char sep[] = " \t\n,;.!?\"(){}";
 
 	i = 0;
