@@ -6,17 +6,17 @@
 char *leet(char *s)
 {
 	int i = 0;
-	int j = 0;
 	char from[] = "aAeEoOtTlL";
 	char to[] = "4433007711";
 
 	while (s[i])
 	{
+		int j = 0;
 		while (from[j])
 		{
 			if (s[i] == from[j])
 			{
-				s[i] == to[j];
+				s[i] = to[j];
 				break;
 			}
 			j++;
