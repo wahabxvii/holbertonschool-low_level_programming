@@ -1,21 +1,16 @@
 #include "main.h"
 /**
-* _strchr - locates a character in a string
+* _strchr - print a string starting from c
 * @s: pointer to a string
 * @c: char start the output with
 * Return: pointer to a string
 */
 char *_strchr(char *s, char c)
 {
-	int i = 0;
-
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		if (s[i] == c)
-			return (s + i);
-		i++;
+		if (*s == c) return (char *) s;
+		s++;
 	}
-	if (s[i] == '\0')
-		return (s + i);
-	return (NULL);
+	return (s);
 }
