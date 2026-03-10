@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-* _strstr -
-* @
-* @ 
-* Return: 
+* _strstr - locates a substring
+* @haystack: pointer to a string
+* @needle: list of selected chars
+* Return: pointer to a string
 */
 char *_strstr(char *haystack, char *needle)
 {
