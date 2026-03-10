@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* print_chessboard -
+* print_chessboard - print an array like chessboard
 * @a: pointer to char string
 * Return: nothing
 */
