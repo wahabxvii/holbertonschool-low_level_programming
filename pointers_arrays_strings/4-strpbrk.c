@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-* _strpbrk - 
-* @s:
-* @accept:
-* Return: 
+* _strpbrk - searches a string for any of a set of bytes
+* @s: pointer to a string
+* @accept: accepted list of chars
+* Return: pointer to rest of string
 */
 char *_strpbrk(char *s, char *accept)
 {
