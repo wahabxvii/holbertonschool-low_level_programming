@@ -9,46 +9,26 @@ int _strlen(char *s);
 */
 char *str_concat(char *s1, char *s2)
 {
-	int s1_len;
-	int s2_len;
-	char *str;
-	int size;
+	int len1 = 0;
+	int len2 = 0;
+	char *result;
 	int i;
 
-	if (s1 == 0 && s2 == 0)
-		return (0);
-	if (s1 == 0)
-	{
-		s2_len = _strlen(s2);
-		str = malloc((s2_len + 1) * sizeof(char));
-		for (i = 0;
-	   i < s2_len; i++)
-			str[i] = s2[i];
-		str[s2_len] = '\0';
-		return (str);
-	}
-	if (s2 == 0)
-	{
-		s1_len = _strlen(s1);
-		str = malloc((s1_len + 1) * sizeof(char));
-		for (i = 0;
-		i < s1_len; i++)
-			str[i] = s1[i];
-		str[s1_len] = '\0';
-		return (str);
-	}
-	s1_len = _strlen(s1);
-	s2_len = _strlen(s2);
-	size = s1_len + s2_len + 1;
-	str = malloc(size * sizeof(char));
+	if (s1 != NULL)
+		len1 = _strlen(s1);
+	if (s2 != NULL)
+		len2 = _strlen(s2);
+	result = malloc(len1 + len2 +1);
+	if (result == NULL)
+		return (NULL);
 	for (i = 0;
-	  i < s1_len; i++)
-		str[i] = s1[i];
+		i < len1; i++)
+			result[i] = s1[i];
 	for (i = 0;
-	  i < s2_len; i++)
-		str[s1_len + i] = s2[i];
-	str[size - 1] = '\0';
-	return (str);
+		i < len2; i++)
+			result[len1 + i] = s2[i];
+	result[len1 + len2] = '\0';
+	return (result);
 }
 /**
  * _strlen - print the length of string
