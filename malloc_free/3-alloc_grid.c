@@ -14,7 +14,7 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	grid = malloc(height * sizeof(int));
+	grid = malloc(height * sizeof(int *));
 	if (grid == NULL)
 		return (NULL);
 	for (h = 0;
@@ -28,20 +28,4 @@ int **alloc_grid(int width, int height)
 			grid[h][w] = 0;
 	}
 	return (grid);
-}
-/**
- * _strlen - print the length of string
- * @s: variable pointer
- * Return: length of a string
- */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (*s != '\0')
-	{
-		i++;
-		s++;
-	}
-	return (i);
 }
