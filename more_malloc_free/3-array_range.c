@@ -1,7 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 /**
+* array_range - creates an array of integers.
+* @min: minmal number included
+* @max: maxmum number included
 *
+* Return: pointer to an array.
 */
 int *array_range(int min, int max)
 {
@@ -14,7 +18,7 @@ int *array_range(int min, int max)
 	if (arr == NULL)
 		return (NULL);
 	for (i = 0;
-	i <=(max - min); i++)
+	i <= (max - min); i++)
 		arr[i] = min + i;
 	return (arr);
 }
