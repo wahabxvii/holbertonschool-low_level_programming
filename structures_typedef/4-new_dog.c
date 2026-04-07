@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
 #include <string.h>
+int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 /**
 * new_dog - creates a new dog info
@@ -33,6 +34,22 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	_strcpy(new_dog->owner, owner);
 	return (new_dog);
+}
+/**
+ * _strlen - print the length of string
+ * @s: variable pointer
+ * Return: length of a string
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (*s != '\0')
+	{
+		i++;
+		s++;
+	}
+	return (i);
 }
 /**
  * _strcpy - copy a string
