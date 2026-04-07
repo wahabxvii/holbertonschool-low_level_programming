@@ -1,0 +1,15 @@
+allocgrid(width and height)
+
+if width <= 0 or height <= 0 then return NULL 
+
+width = 0
+height = 0
+
+2dstring
+
+allocate memory for 2dstring = width * height
+
+if 2dstring =to 0 return NULL
+
+return 2dstring
+
