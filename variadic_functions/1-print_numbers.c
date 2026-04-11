@@ -26,12 +26,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 				printf("%s", separator);
 		}
 	}
-	va_start(args, n);
-	for (i = 0;
-	i < n; i++)
+	else
 	{
-		x = va_arg(args, int);
-		printf("%d", x);
+		va_start(args, n);
+		for (i = 0;
+		i < n; i++)
+		{
+			x = va_arg(args, int);
+			printf("%d", x);
+		}
 	}
 	printf("\n");
 }
