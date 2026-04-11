@@ -2,7 +2,11 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
+* print_strings - print numbers followed by a new line.
+* @separator: string separates strings
+* @n: count of strings
 *
+* Return: nothing.
 */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -19,9 +23,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			x = va_arg(args, char*);
 			if (x == 0)
 				printf("nil");
-			printf("%s", x);
-			if (i < n - 1)
-				printf("%s", separator);
+			else
+			{
+				printf("%s", x);
+				if (i < n - 1)
+					printf("%s", separator);
+			}
 		}
 	}
 	else
@@ -35,5 +42,4 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 	}
 	printf("\n");
-	
 }
