@@ -32,9 +32,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		free(new_node->value);
 		free(new_node);
-		return(0);
+		return (0);
 	}
-	index = key_index((const unsigned char *)key,ht->size);
+	index = key_index((const unsigned char *)key, ht->size);
 	prev = NULL;
 	current = ht->array[index];
 	while (!current)
